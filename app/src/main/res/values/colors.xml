@@ -6,4 +6,6 @@
     <color name="colorNickTextLowBlack">#b4b4b4</color>
     <color name="colorNickBottomBackground">#f8f8f8</color>
     <color name="colorNickTextBlue">#00c4fc</color>
+    <color name="colorNickDeviceTextBlack">#323232</color>
+    <color name="colorNickMain">#f0f0f0</color>
 </resources>

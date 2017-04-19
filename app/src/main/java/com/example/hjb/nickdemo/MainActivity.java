@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
+        //初始化所有控件，并设置device为第一个为初始界面
         initIv();
         setdefault();
     }
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         currentFragment=deviceFragment;
         fragmentManager.beginTransaction().add(R.id.realFragment,deviceFragment).commit();
     }
-
+    //设置点击事件
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+    //设置点击事件响应
     public void setWhenDeviceClicked(Fragment fragment){
 
         deviceIv.setImageResource(R.drawable.nick_main_device_black);
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             deviceIv.setImageResource(R.drawable.nick_main_device_blue);
             deviceTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
         }else if(fragment instanceof PictureFragment){
-            picIv.setImageResource(R.drawable.nick_main_pic_black);
+            picIv.setImageResource(R.drawable.nick_main_pic_blue);
             picTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
         }else if(fragment instanceof NickFragment){
             nickIv.setImageResource(R.drawable.nick_main_nick_black);

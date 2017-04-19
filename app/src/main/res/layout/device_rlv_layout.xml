@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#fff">
+<ImageView
+    android:id="@+id/deviceRlvImage"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_width="130dp"
+    android:layout_height="72dp" />
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/deviceRlvImage"
+        android:id="@+id/deviceRlvName"
+        android:text="我的尼可"
+        android:textColor="@color/colorNickDeviceTextBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/deviceRlvAtLine"
+        android:layout_below="@+id/deviceRlvName"
+        android:layout_alignLeft="@+id/deviceRlvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="在线状态"
+        android:textColor="@color/colorNickTextBlue"/>
+    <TextView
+        android:id="@+id/deviceRlvStart"
+        android:layout_below="@+id/deviceRlvAtLine"
+        android:layout_marginTop="15dp"
+        android:layout_alignLeft="@+id/deviceRlvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启安防"
+        android:textColor="@color/colorNickDeviceTextBlack"/>
+    <Switch
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="220dp"
+        android:id="@+id/deviceRlvSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:background="@drawable/nick_device_getin"
+        android:layout_marginLeft="336dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"/>
+
+
+</RelativeLayout>
