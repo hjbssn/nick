@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/relaMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:background="@color/colorNickBottomBackground"
+                android:id="@+id/bottomTab"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:baselineAligned="true">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <ImageView
+                        android:id="@+id/deviceIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/nick_main_device_black"
+                        android:contentDescription="@null"/>
+
+                    <TextView
+                        android:id="@+id/deviceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deviceIv"
+                        android:layout_centerHorizontal="true"
+                        android:text="设备"
+                        android:textColor="@color/colorNickTextLowBlack"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <ImageView
+                        android:id="@+id/picIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/nick_main_pic_black"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/picTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/picIv"
+                        android:layout_centerHorizontal="true"
+                        android:text="相册"
+                        android:textColor="@color/colorNickTextLowBlack"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <ImageView
+                        android:id="@+id/nickIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/nick_main_nick_black"
+                        android:contentDescription="@null" />
+
+
+                    <TextView
+                        android:id="@+id/nickTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nickIv"
+                        android:layout_centerHorizontal="true"
+                        android:text="尼可"
+                        android:textColor="@color/colorNickTextLowBlack"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_weight="1.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/userIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/nick_main_user_black"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/userTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userIv"
+                        android:layout_centerHorizontal="true"
+                        android:text="我的"
+                        android:textColor="@color/colorNickTextLowBlack"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!-- 内容部分， fragment切换 -->
+
+            <LinearLayout
+                android:id="@+id/realFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/line"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@id/bottomTab"
+                android:background="#b4b4b4" />
+            </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>
