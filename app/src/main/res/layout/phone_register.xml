@@ -144,21 +144,22 @@
         android:layout_width="328dp"
         android:layout_height="1dp"/>
     <RelativeLayout
+        android:layout_gravity="center_vertical"
         android:paddingLeft="14dp"
-        android:paddingBottom="6.5dp"
-        android:paddingTop="6.5dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
 
-            android:layout_marginTop="9.5dp"
+            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="验证码"
             android:textSize="14sp"
             android:textColor="#323232"/>
         <EditText
-            android:layout_marginTop="9.5dp"
+            android:layout_marginTop="8dp"
             android:layout_marginLeft="107dp"
             android:textColor="#323232"
             android:textSize="14sp"
@@ -173,7 +174,7 @@
             android:layout_height="33dp"
             />
         <TextView
-            android:layout_marginTop="9.5dp"
+            android:layout_marginTop="8dp"
             android:layout_marginLeft="240dp"
             android:hint="重新获取(60s)"
             android:layout_width="wrap_content"
@@ -184,6 +185,48 @@
         android:layout_marginLeft="15dp"
         android:layout_width="328dp"
         android:layout_height="1dp"/>
-
+    <RelativeLayout
+        android:layout_marginTop="53dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:textSize="17sp"
+            android:text="注册"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            android:layout_width="328dp"
+            android:layout_height="42dp"
+            android:background="@drawable/let_go_btn_selector"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="7dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/registerTv"
+        android:text="*注册代表同意"
+        android:textColor="#686868"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#00c4fc"
+            android:text="《尼可网络服务使用协议》"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/registerTv"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="135dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#00c4fc"
+            android:text="邮箱注册"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
 </LinearLayout>
