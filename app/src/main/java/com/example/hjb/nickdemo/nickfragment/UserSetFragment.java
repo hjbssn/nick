@@ -12,7 +12,7 @@ import com.example.hjb.nickdemo.R;
  * Created by hjb on 2017/4/19.
  */
 
-public class DeviceFragment extends Fragment {
+public class UserSetFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +22,7 @@ public class DeviceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_login, container, false);
+        View view = inflater.inflate(R.layout.phone_register, container, false);
         return view;
     }
 }

@@ -13,7 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hjb.nickdemo.nickfragment.DeviceFragment;
+import com.example.hjb.nickdemo.nickfragment.NickFragment;
 import com.example.hjb.nickdemo.nickfragment.PictureFragment;
+import com.example.hjb.nickdemo.nickfragment.UserSetFragment;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Fragment currentFragment;
     private DeviceFragment deviceFragment;
     private PictureFragment pictureFragment;
+    private NickFragment nickFragment;
+    private UserSetFragment userSetFragment;
     private ImageView deviceIv,picIv,nickIv,userIv;
     private TextView deviceTv,picTv,nickTv,userTv;
     private FragmentManager fragmentManager;
@@ -30,9 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
-        fragmentManager = getSupportFragmentManager();
         initIv();
-
+        setdefault();
     }
     private void initIv(){
         //获取所有控件
@@ -41,7 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         picIv = (ImageView)findViewById(R.id.picIv);
         picIv.setOnClickListener(this);
         nickIv = (ImageView)findViewById(R.id.nickIv);
+        nickIv.setOnClickListener(this);
         userIv =(ImageView)findViewById(R.id.userIv);
+        userIv.setOnClickListener(this);
         deviceTv = (TextView) findViewById(R.id.deviceTv);
         picTv = (TextView)findViewById(R.id.picTv);
         nickTv = (TextView)findViewById(R.id.nickTv);
@@ -50,8 +55,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //设置初始状态。
         deviceIv.setImageResource(R.drawable.nick_main_device_blue);
         deviceTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
-        Log.d("MainActivity","y");
+
         //fragmentManager.beginTransaction().add(R.id.realFragment, new DeviceFragment()).commit();
+    }
+    private void setdefault(){
+        if(deviceFragment==null){
+            deviceFragment=new DeviceFragment();
+        }
+        fragmentManager = getSupportFragmentManager();
+        currentFragment=deviceFragment;
+        fragmentManager.beginTransaction().add(R.id.realFragment,deviceFragment).commit();
     }
 
     @Override
@@ -64,36 +77,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 setWhenDeviceClicked(deviceFragment);
                 break;
             case R.id.picIv:
+                if(pictureFragment==null){
+                    pictureFragment=new PictureFragment();
+                }
+                setWhenDeviceClicked(pictureFragment);
                 break;
             case R.id.nickIv:
+                if(nickFragment==null){
+                    nickFragment=new NickFragment();
+                }
+                setWhenDeviceClicked(nickFragment);
                 break;
             case R.id.userIv:
+                if(userSetFragment==null){
+                    userSetFragment=new UserSetFragment();
+                }
+                setWhenDeviceClicked(userSetFragment);
                 break;
         }
     }
     public void setWhenDeviceClicked(Fragment fragment){
-        Log.d("MainActivity","yesssss");
-        if(pictureFragment==null){
-            pictureFragment=new PictureFragment();
-        }
-        if(fragment instanceof DeviceFragment){
-            Log.d("MainActivity","yes");
-        }
 
-        if(deviceFragment==null){
-            deviceFragment=new DeviceFragment();
-        }
-        addOrShowFragment(getSupportFragmentManager().beginTransaction(), deviceFragment);
-
-        // 设置底部tab变化
-        deviceIv.setImageResource(R.drawable.nick_main_device_blue);
-        deviceTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
+        deviceIv.setImageResource(R.drawable.nick_main_device_black);
+        deviceTv.setTextColor(getResources().getColor(R.color.colorNickTextLowBlack));
         picIv.setImageResource(R.drawable.nick_main_pic_black);
         picTv.setTextColor(getResources().getColor(R.color.colorNickTextLowBlack));
         nickIv.setImageResource(R.drawable.nick_main_nick_black);
         nickTv.setTextColor(getResources().getColor(R.color.colorNickTextLowBlack));
         userIv.setImageResource(R.drawable.nick_main_user_black);
         userTv.setTextColor(getResources().getColor(R.color.colorNickTextLowBlack));
+        if(fragment instanceof DeviceFragment){
+
+            deviceIv.setImageResource(R.drawable.nick_main_device_blue);
+            deviceTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
+        }else if(fragment instanceof PictureFragment){
+            picIv.setImageResource(R.drawable.nick_main_pic_black);
+            picTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
+        }else if(fragment instanceof NickFragment){
+            nickIv.setImageResource(R.drawable.nick_main_nick_black);
+            nickTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
+        }else if(fragment instanceof UserSetFragment){
+            userIv.setImageResource(R.drawable.nick_main_user_black);
+            userTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
+        }
+        addOrShowFragment(fragmentManager.beginTransaction(), fragment);
+
     }
 
 
