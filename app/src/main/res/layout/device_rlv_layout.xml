@@ -41,11 +41,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <ImageButton
+        android:layout_centerVertical="true"
         android:background="@drawable/nick_device_getin"
         android:layout_marginLeft="336dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"/>
+        />
 
 
 </RelativeLayout>

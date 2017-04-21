@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             nickIv.setImageResource(R.drawable.nick_main_nick_black);
             nickTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
         }else if(fragment instanceof UserSetFragment){
-            userIv.setImageResource(R.drawable.nick_main_user_black);
+            userIv.setImageResource(R.drawable.nick_main_user_blue);
             userTv.setTextColor(getResources().getColor(R.color.colorNickTextBlue));
         }
         addOrShowFragment(fragmentManager.beginTransaction(), fragment);
