@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorNickMain">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#00c4fc">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="设备"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="#fff">
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNickDeviceTextBlack"
+            android:textSize="14sp"
+            android:text="我的尼可"/>
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="334dp"
+            android:background="@drawable/nick_pic_list"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/device_rlv_imglearn"
+            android:alpha="0.8"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b0000000"/>
+    <Button
+        android:layout_centerInParent="true"
+        android:text="所有照片"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_width="148dp"
+        android:layout_height="46dp"
+
+        android:background="@drawable/pic_shape"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/device_rlv_imglearn"
+            android:alpha="0.8"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b0000000"/>
+        <Button
+            android:layout_centerInParent="true"
+            android:text="相册"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_width="148dp"
+            android:layout_height="46dp"
+
+            android:background="@drawable/pic_shape"/>
+    </RelativeLayout>
+
+    
+
+</LinearLayout>
