@@ -1,25 +1,18 @@
 package com.example.hjb.nickdemo;
 
-import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hjb.nickdemo.nickfragment.DeviceFragment;
+import com.example.hjb.nickdemo.nickfragment.device.DeviceFragment;
 import com.example.hjb.nickdemo.nickfragment.NickFragment;
-import com.example.hjb.nickdemo.nickfragment.PictureFragment;
+import com.example.hjb.nickdemo.nickfragment.picture.PictureFragment;
 import com.example.hjb.nickdemo.nickfragment.UserSetFragment;
-
-import java.io.FileDescriptor;
-import java.io.PrintWriter;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Fragment currentFragment;

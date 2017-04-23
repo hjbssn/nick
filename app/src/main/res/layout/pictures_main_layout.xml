@@ -15,7 +15,7 @@
             android:textSize="20sp"
             android:text="设备"/>
     </RelativeLayout>
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="37dp"
         android:background="#fff">
@@ -34,8 +34,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="334dp"
             android:background="@drawable/nick_pic_list"/>
-    </RelativeLayout>
-
+    </RelativeLayout>-->
+    <ExpandableListView
+        android:id="@+id/dev_expandablelistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:groupIndicator="@null"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="13dp"/>
@@ -45,6 +50,7 @@
         android:layout_height="200dp"
         >
         <ImageView
+            android:id="@+id/allPicIv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/device_rlv_imglearn"
@@ -54,6 +60,7 @@
             android:layout_height="match_parent"
             android:background="#b0000000"/>
     <Button
+        android:id="@+id/allPic"
         android:layout_centerInParent="true"
         android:text="所有照片"
         android:textColor="#fff"
@@ -73,6 +80,7 @@
         android:layout_height="200dp"
         >
         <ImageView
+            android:id="@+id/albumIv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/device_rlv_imglearn"
@@ -82,6 +90,7 @@
             android:layout_height="match_parent"
             android:background="#b0000000"/>
         <Button
+            android:id="@+id/album"
             android:layout_centerInParent="true"
             android:text="相册"
             android:textColor="#fff"

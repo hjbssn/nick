@@ -1,4 +1,4 @@
-package com.example.hjb.nickdemo.nickfragment;
+package com.example.hjb.nickdemo.nickfragment.device;
 
 /**
  * Created by hjb on 2017/4/19.

@@ -1,4 +1,4 @@
-package com.example.hjb.nickdemo.nickfragment;
+package com.example.hjb.nickdemo.nickfragment.device;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
