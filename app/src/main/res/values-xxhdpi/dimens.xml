@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="photo_bottom_tool_icon_size">20dp</dimen>
+    <dimen name="textSizeSmall">12sp</dimen>
+    <dimen name="photo_bottom_tool_label_marginTop">10dp</dimen>
+    <dimen name="photo_checkBox_margin">6.7dp</dimen>
+</resources>

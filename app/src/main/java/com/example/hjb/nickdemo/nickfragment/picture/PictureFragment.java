@@ -1,10 +1,9 @@
 package com.example.hjb.nickdemo.nickfragment.picture;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcel;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +25,7 @@ import java.util.Map;
  * Created by hjb on 2017/4/19.
  */
 
-public class PictureFragment extends Fragment {
+public class PictureFragment extends Fragment implements View.OnClickListener{
 
     ImageView allPicIv;
     ImageView albumIv;
@@ -51,12 +50,15 @@ public class PictureFragment extends Fragment {
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.pictures_main_layout, container, false);
         dev_expandablelistview = (ExpandableListView)view.findViewById(R.id.dev_expandablelistview);
+        //设置查看所有控件
         allPic = (Button)view.findViewById(R.id.allPic);
+        allPic.setOnClickListener(this);
         album = (Button)view.findViewById(R.id.album);
         allPicIv = (ImageView)view.findViewById(R.id.allPicIv);
         albumIv = (ImageView)view.findViewById(R.id.albumIv);
@@ -79,7 +81,7 @@ public class PictureFragment extends Fragment {
             NKDeviceInfoModel nkDeviceInfoModel = new NKDeviceInfoModel();
             nkDeviceInfoModel.setDeviceName("device"+i);
             nkDeviceInfoModel.setId(""+(char)(i+'a'));
-            Log.d("PictureFragment",nkDeviceInfoModel.getId());
+            //Log.d("PictureFragment",nkDeviceInfoModel.getId());
             devices.add(nkDeviceInfoModel);
         }
         if (devices != null && devices.size() != 0) {
@@ -97,7 +99,7 @@ public class PictureFragment extends Fragment {
         if(string.equals("a")){
 
         }else {
-            Log.d("PictureFragment",string);
+            //Log.d("PictureFragment",string);
             allPicIv.setImageResource(R.drawable.let_go_btn_normal);
         }
     }
@@ -115,7 +117,7 @@ public class PictureFragment extends Fragment {
                 adapter.changeHeader(devices.get(childPosition).getDeviceName());
                 //presenter.getDefaultPhotoes(devices.get(childPosition).getId());
                 setDefaultList(devices.get(childPosition).getId());
-                Log.d("pictureFragment","k:"+devices.get(childPosition).getId());
+                //Log.d("pictureFragment","k:"+devices.get(childPosition).getId());
                 deviceID = devices.get(childPosition).getId();
                 dev_expandablelistview.collapseGroup(groupPosition);
                 return true;
@@ -123,7 +125,7 @@ public class PictureFragment extends Fragment {
         });
         setDefaultList();
         if (devices != null && devices.size() > 0) {
-            Log.d("pictureFragment","s:"+devices.get(0).getId());
+            //Log.d("pictureFragment","s:"+devices.get(0).getId());
             setDefaultList(devices.get(0).getId());
         }
         adapter.notifyDataSetChanged();
@@ -229,5 +231,14 @@ public class PictureFragment extends Fragment {
 
     }
 
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.allPic:
+                Intent intent = new Intent(PictureFragment.this.getContext(), PictureAllActivity.class);
+                intent.putExtra("deviceID",deviceID);
+                startActivity(intent);
+                break;
+        }
+    }
 }

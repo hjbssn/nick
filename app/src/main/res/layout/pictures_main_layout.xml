@@ -13,7 +13,7 @@
             android:layout_centerInParent="true"
             android:textColor="#fff"
             android:textSize="20sp"
-            android:text="设备"/>
+            android:text="相册"/>
     </RelativeLayout>
     <!--<RelativeLayout
         android:layout_width="match_parent"

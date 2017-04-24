@@ -8,4 +8,7 @@
     <color name="colorNickTextBlue">#00c4fc</color>
     <color name="colorNickDeviceTextBlack">#323232</color>
     <color name="colorNickMain">#f0f0f0</color>
+    <color name="colorUnClick">#dddddd</color>
+    <color name="colorLightGray">#BDBDBD</color>
+    <color name="colorLightWhite">#f8f8f8</color>
 </resources>
