@@ -139,4 +139,10 @@ public class PhotoListFragment extends Fragment{
             ((ViewGroup) view).removeAllViews();
         }
     }
+
+    public void showSelectIcon() {
+        NKPhotoListAdapter listAdapter = (NKPhotoListAdapter) photoList.getAdapter();
+        listAdapter.setChooseable(true);
+        Log.d("PhotoListFragment","showcselectIcon");
+    }
 }

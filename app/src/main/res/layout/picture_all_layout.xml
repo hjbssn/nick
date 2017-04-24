@@ -21,6 +21,7 @@
             android:textSize="20sp"
             android:text="相册"/>
         <TextView
+            android:id="@+id/select"
             android:textColor="#fff"
             android:textSize="20sp"
             android:text="选择"
